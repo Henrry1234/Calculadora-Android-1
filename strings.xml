@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="error_div_zero">No se puede dividir entre 0</string>
+</resources>

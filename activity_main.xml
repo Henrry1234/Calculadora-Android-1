@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Pantalla -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom|end"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:gravity="end|center_vertical"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="@color/text_primary"
+            android:textSize="64sp"
+            app:autoSizeMaxTextSize="64sp"
+            app:autoSizeMinTextSize="24sp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <!-- Teclado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                style="@style/CalcFunction"
+                android:tag="C"
+                android:text="C" />
+            <Button
+                style="@style/CalcFunction"
+                android:tag="DEL"
+                android:text="⌫" />
+            <Button
+                style="@style/CalcFunction"
+                android:tag="%"
+                android:text="%" />
+            <Button
+                style="@style/CalcOperator"
+                android:tag="/"
+                android:text="÷" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                style="@style/CalcNumber"
+                android:tag="7"
+                android:text="7" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="8"
+                android:text="8" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="9"
+                android:text="9" />
+            <Button
+                style="@style/CalcOperator"
+                android:tag="*"
+                android:text="×" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                style="@style/CalcNumber"
+                android:tag="4"
+                android:text="4" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="5"
+                android:text="5" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="6"
+                android:text="6" />
+            <Button
+                style="@style/CalcOperator"
+                android:tag="-"
+                android:text="−" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                style="@style/CalcNumber"
+                android:tag="1"
+                android:text="1" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="2"
+                android:text="2" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="3"
+                android:text="3" />
+            <Button
+                style="@style/CalcOperator"
+                android:tag="+"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                style="@style/CalcNumber"
+                android:tag="0"
+                android:text="0"
+                android:layout_weight="2" />
+            <Button
+                style="@style/CalcNumber"
+                android:tag="."
+                android:text="." />
+            <Button
+                style="@style/CalcEquals"
+                android:tag="="
+                android:text="=" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
